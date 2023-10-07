@@ -26,7 +26,7 @@
               <button (click)="openDialog(element)">
                 Edit
               </button>
-                <button>
+                <button (click)="deleteUser(element)">
                   Delete
                 </button>
             </td>
@@ -34,4 +34,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    <div align="center" class="mt-5 align-right">
+        <button mat-raised-button color="primary" (click)="openDialog()">ADD</button>
+      </div>
 </div>

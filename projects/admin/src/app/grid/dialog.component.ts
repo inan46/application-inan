@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { User } from '../user.model';
+import { IUser } from '../user.model';
+
 
 @Component({
   selector: 'app-dialog',
@@ -8,16 +9,17 @@ import { User } from '../user.model';
   styleUrls: ['./dialog.scss']
 })
 export class DialogComponent {
-    public dataUser : User;
+    public dataUser : IUser;
  
     constructor(
     private dialog: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA)
     public data: {
-        data : User
+        data : IUser
     }
  ){
     this.dataUser = data.data;
+    //this.dataUser.
  }
 
  openCancelDialog(){
