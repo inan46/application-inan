@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('content/Module').then(m => m.DashboardModule)
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('content/Module').then(m => m.DashboardModule)
     },
